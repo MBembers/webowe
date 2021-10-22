@@ -1,0 +1,66 @@
+<h1>Samochody</h1>
+<div class="container">
+
+  <div class="add-div">
+    <h3>Dane pojazdu:</h3>
+    <form action="addcar" method="GET">
+      <table class="add-table">
+        {{#each context.addform}}
+        <tr class="add-row">
+          <td class="add-cell">
+            <label for="{{this.name}}">{{this.label}}</label>
+          </td>
+          <td class="add-cell">
+            <input type="checkbox" name="{{this.name}}" id="{{this.name}}">
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+      <input type="submit" value="Dodaj do bazy" id="add-btn">
+    </form>
+  </div>
+
+  <div class="display-div">
+    <h3>Wszystkie pojazdy:</h3>
+    <table class="display-table">
+      <tr class="display-row">
+        {{#each context.displaytable.header}}
+        <td class="display-cell">
+          {{this}}
+        </td>
+        {{/each}}
+      </tr>
+      {{#each context.displaytable.content}}
+      <tr class="display-row">
+        <td class="display-cell">
+          {{@index}}
+        </td>
+        <td class="display-cell">
+          {{this.insurance}}
+        </td>
+        <td class="display-cell">
+          {{this.petrol}}
+        </td>
+        <td class="display-cell">
+          {{this.damaged}}
+        </td>
+        <td class="display-cell">
+          {{this.fourwd}}
+        </td>
+        <td class="display-cell">
+          <form action="deleteCar" method="GET">
+            <input type="hidden" name="id" value="{{this._id}}">
+            <input type="submit" class="delete-button" value="DELETE">
+          </form>
+        </td>
+        <td class="display-cell">
+          <form action="editCar" method="GET">
+            <input type="hidden" name="id" value="{{this._id}}">
+            <input type="submit" class="edit-button" value="EDIT">
+          </form>
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+body{
+  background-color: antiquewhite;
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.add-table{
+  font-size: 20pt;
+  width: 200px;
+}
+.add-row{
+  width: 200px;
+}
+.add-cell{
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.display-table{
+  font-size: 15pt;
+  width: 500px;
+}
+.display-row{
+  width: 200px;
+}
+.display-cell{
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}

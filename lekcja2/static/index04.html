@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <h2>T: Formularz wysłany metodą POST</h2>
+  <form action="/handleform" method="POST">
+    <input type="hidden" name="amogus" value="sus">
+    nick: <input type="text" name="nick" class="mb"> <br />
+    email: <input type="text" name="email" class="mb"> <br />
+    <input type="submit" value="wyslij" class="mb">
+  </form>
+
+  <a href="/delete-select">usun email uzywajac selecta</a> <br />
+  <a href="/delete-radio">usun email uzywajac radio</a><br />
+  <a href="/delete-checkbox">usun emaile uzywajac checkbox</a><br />
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>T: MongoDB - CRUD (Create, Read, Update, Delete)</h1>
+      <div class="left-panel panel">
+        <input class="input" type="text" placeholder="login" id="username" />
+        <input class="input" type="text" placeholder="password" id="password" />
+        <div class="button blue" id="add-user">+ dodaj usera</div>
+        <div class="button blue" id="refresh">odśwież userów</div>
+      </div>
+      <div class="right-panel panel">
+        <select name="userid" id="id-select"></select>
+        <div class="button red" id="delete-user">usuń wybranego usera</div>
+        <div class="button pink" id="update-user">zaktualizuj hasło usera</div>
+        <textarea name="textarea" id="texarea" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+  </body>
+</html>
